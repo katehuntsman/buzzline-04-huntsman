@@ -3,15 +3,12 @@
 ## Custom Consumer: Real-Time Sentiment Analysis
 
 ### Overview
-This consumer, `project_consumer_huntsman.py`, listens to a Kafka topic and processes JSON messages containing a **sentiment score** and a **timestamp**. It visualizes the **average sentiment** of messages over time using a **line chart**.
-
-### Insight
-The consumer tracks the **average sentiment** of messages over time. This insight can help analyze how the tone of messages evolves in real-time, offering valuable information about the general mood of the stream.
+The consumer tracks the **average sentiment** of messages over time, grouped by category. The sentiment value (ranging from 0 to 1) provides a numerical way to gauge how positive or negative the messages are. Grouping them by category allows us to see trends in sentiment across different topics (e.g., tech, entertainment, etc.).
 
 ### Visualization
-A **line chart** is used to display:
-- **X-axis**: Timestamp of the message.
-- **Y-axis**: Average sentiment score of the messages at each timestamp.
+A **bar chart** is used to display:
+- **X-axis**: categories (e.g., "tech," "humor"), and
+- **Y-axis**: the average sentiment value (ranging from 0 to 1).
 
 ### Running the Producer & Consumer
 ```
