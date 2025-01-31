@@ -1,4 +1,26 @@
-# buzzline-04-case
+# buzzline-04-huntsman 
+
+## Custom Consumer: Real-Time Sentiment Analysis
+
+### Overview
+This consumer, `project_consumer_huntsman.py`, listens to a Kafka topic and processes JSON messages containing a **sentiment score** and a **timestamp**. It visualizes the **average sentiment** of messages over time using a **line chart**.
+
+### Insight
+The consumer tracks the **average sentiment** of messages over time. This insight can help analyze how the tone of messages evolves in real-time, offering valuable information about the general mood of the stream.
+
+### Visualization
+A **line chart** is used to display:
+- **X-axis**: Timestamp of the message.
+- **Y-axis**: Average sentiment score of the messages at each timestamp.
+
+### Running the Producer & Consumer
+```
+source .venv/bin/activate
+python3 -m producers.project_producer_huntsman
+
+source .venv/bin/activate
+python3 -m consumers.project_consumer_huntsman
+```
 
 We can analyze and visualize different types of streaming data as the information arrives.
 
